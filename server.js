@@ -22,7 +22,7 @@ app.use(function(req, res, next) {
 });
 
 // start server (listen on port 443 - SSL)
-sslSrv = https.createServer(options, app).listen(444 ,'0.0.0.0');
+sslSrv = https.createServer(options, app).listen(process.env.PORT || 444 ,'0.0.0.0');
 console.log("The HTTPS server is up and running");
 
 
